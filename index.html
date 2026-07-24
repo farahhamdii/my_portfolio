@@ -4,432 +4,496 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Farah Hamdii</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
 
+  <!-- Bootstrap (navbar only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section, .edu-item, .home-content .text, .home-content .image");
+<body>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.2 });
+  <!-- ============ Navbar ============ -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#home">My Portfolio</a>
 
-    sections.forEach(sec => {
-      sec.classList.add("fade-in-up");
-      observer.observe(sec);
-    });
-  });
-</script>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-<body style="background-color: black;">
-  <!-- Navbar -->
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<header>
-  <nav class="navbar navbar-expand-lg bg-black" style="box-shadow: 0px 0px 20px rgba(204, 70, 204, 0.5);">
-    <div class="container-fluid">
-  
-      <a class="navbar-brand text-white" href="#home" style="font-weight: bold;">My Portfolio</a>
-
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto" style="font-weight: bold;">
-          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#Certificates">Certificates</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#Languages">Languages</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-          <li class="nav-item">
-            <a href="https://drive.google.com/file/d/1VQZS71kPqKVPGoVDO6uayA6JJkZEHDAb/view?usp=sharing" 
-               class="btn" style="background-color: blueviolet; color: white; border: none;" 
-               download aria-label="Download CV">Download CV</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Home -->
-<section id="home" class="home py-5" aria-label="Introduction"style="padding:10px;">
-  <div class="container">
-    <div class="row align-items-center home-content">
-      
-      <!-- النص -->
-      <div class="col-md-6 text fade-in-left mb-5 mb-md-0">
-        <h1>Hi, I’m <span class="highlight">Farah Hamdii</span></h1>
-        <p class="role">Full Stack Developer<br>
-          Currently seeking opportunities to gain hands
-on experience and grow within the tech industry. 
-        </p>
-        <div class="buttons mt-3">
-          <a href="#projects" class="btn btn-primary me-2" aria-label="See my work" style="background-color: blueviolet; border:none;">See My Work</a>
-          <a href="#contact" class="btn btn-outline-light" aria-label="Hire me">Hire Me</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#Certificates">Certificates</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#Languages">Languages</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#internship">Internship</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#achievements">Achievements</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <a href="https://drive.google.com/file/d/142uC8YKMHRehDuh4jg9Yx-uzx5s-kc3l/view?usp=sharing"
+                 class="btn custom-btn" download aria-label="Download CV">Download CV</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
 
-      <!-- الصورة -->
-<div class="col-md-6 image fade-in-right text-center " aria-hidden="true">
-  <img src="images/WhatsApp Image 2025-09-05 at 19.21.18_0879229d.jpg" 
-       alt="Portrait of Farah Hamdii" 
-       class="img-fluid oval-img">
-</div>
+  <!-- ============ Home ============ -->
+  <section id="home" class="home" aria-label="Introduction">
+    <div class="container">
+      <div class="row align-items-center home-content">
 
+        <div class="col-md-6 text fade-in-left mb-5 mb-md-0">
+          <h1>Hi, I’m <span class="highlight">Farah Hamdii</span></h1>
+          <p class="role">
+            Full Stack Developer<br>
+            Currently seeking opportunities to gain hands-on experience and grow within the tech industry.
+          </p>
+          <div class="buttons mt-3">
+            <a href="#projects" class="btn custom-btn me-2" aria-label="See my work">See My Work</a>
+            <a href="#contact" class="btn btn-outline-light custom-btn" aria-label="Hire me">Hire Me</a>
+          </div>
+        </div>
 
+        <div class="col-md-6 image fade-in-right text-center" aria-hidden="true">
+          <img src="images/main_profile.png"
+               alt="Portrait of Farah Hamdii"
+               class="img-fluid oval-img">
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- About -->
+  <!-- ============ About ============ -->
   <section id="about">
     <h2><span class="highlight">About Me</span></h2>
     <p>
-      I build responsive and functional websites using <strong>HTML, CSS, and JavaScript</strong> — and develop back-end systems with <strong>C#</strong> and <strong>SQL</strong>.  
-      I focus on clean code, smooth user experience, and real results.providing a seamless user experience, and delivering
- functional results. Possesses strong attention to detail and maintains consistent
- communication throughout projects. Currently seeking opportunities to gain hands
-on experience and grow within the tech industry. 
+      I build responsive and functional websites using <strong>HTML, CSS, and JavaScript</strong> — and develop
+      back-end systems with <strong>C#</strong> and <strong>SQL</strong>. I focus on clean code, a smooth user
+      experience, and real results. I have strong attention to detail and maintain consistent communication
+      throughout every project, and I'm currently seeking opportunities to gain hands-on experience and grow
+      within the tech industry.
     </p>
   </section>
-<br>
 
-  <!-- Education -->
+  <!-- ============ Education ============ -->
   <section id="education" class="education">
     <h2><span class="highlight">Education</span></h2>
     <div class="edu-item">
-      <img src="https://s.yimg.com/zb/imgv1/b11e0b4e-ddaf-33d3-80d5-da42707e6993/t_500x300" >
-      <h3>Benha University</h3>
-      <p style="font-size: 15px; font-weight:bold;">Computer Science <br> 2023 : 2027</p>
+      <img src="https://s.yimg.com/zb/imgv1/b11e0b4e-ddaf-33d3-80d5-da42707e6993/t_500x300" alt="Benha University logo">
+      <div>
+        <h3>Benha University</h3>
+        <p>Computer Science <br> 2023 – 2027</p>
+      </div>
     </div>
   </section>
 
-<br>
-<!-- Languages Section -->
-<section id="Languages" class="languages">
-  <h2><span class="highlight">Languages</span></h2>
-  <div class="lang-circles">
-    <div class="circle">
-      <svg>
-        <circle cx="70" cy="70" r="70"></circle>
-        <circle cx="70" cy="70" r="70" style="--percent: 100"></circle>
-      </svg>
-      <div class="lang-text">
-        <h3>Arabic</h3>
-        <p>Native</p>
+  <!-- ============ Languages ============ -->
+  <section id="Languages" class="languages">
+    <h2><span class="highlight">Languages</span></h2>
+    <div class="lang-circles">
+      <div class="circle">
+        <svg viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" style="--percent: 100"></circle>
+        </svg>
+        <div class="lang-text">
+          <h3>Arabic</h3>
+          <p>Native</p>
+        </div>
+      </div>
+
+      <div class="circle">
+        <svg viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" style="--percent: 85"></circle>
+        </svg>
+        <div class="lang-text">
+          <h3>English</h3>
+          <p>Fluent</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="circle">
-      <svg>
-        <circle cx="70" cy="70" r="70"></circle>
-        <circle cx="70" cy="70" r="70" style="--percent: 85"></circle>
-      </svg>
-      <div class="lang-text">
-        <h3>English</h3>
-        <p>Fluent</p>
+  <!-- ============ Skills ============ -->
+  <section id="skills" class="skills">
+    <h2><span class="highlight">My Skills</span></h2>
+
+    <div class="skills-wrapper">
+      <!-- Technical Skills -->
+      <div class="skills-card">
+        <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+
+        <div class="skills-category">
+          <h4>Backend & Core</h4>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fas fa-code"></i> C#</span>
+            <span class="skill-tag"><i class="fas fa-server"></i> .NET / ASP.NET Core</span>
+            <span class="skill-tag"><i class="fas fa-database"></i> Entity Framework Core</span>
+            <span class="skill-tag"><i class="fas fa-network-wired"></i> RESTful APIs</span>
+            <span class="skill-tag"><i class="fas fa-database"></i> SQL Server / SQL</span>
+            <span class="skill-tag"><i class="fas fa-sitemap"></i> Repository Pattern</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h4>Frontend Basics</h4>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h4>Tools & Architecture</h4>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+            <span class="skill-tag"><i class="fas fa-layer-group"></i> Clean Architecture</span>
+            <span class="skill-tag"><i class="fas fa-project-diagram"></i> CCNA</span>
+            <span class="skill-tag"><i class="fas fa-vial"></i> Postman / Swagger</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skills-card">
+        <h3><i class="fas fa-user-tie"></i> Soft Skills</h3>
+        <div class="skills-tags soft-skills">
+          <span class="skill-tag"><i class="fas fa-comments"></i> Communication</span>
+          <span class="skill-tag"><i class="fas fa-comments"></i> Good speaker presentation</span>
+          <span class="skill-tag"><i class="fas fa-users"></i> Teamwork</span>
+          <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+          <span class="skill-tag"><i class="fas fa-clock"></i> Time Management</span>
+          <span class="skill-tag"><i class="fas fa-search"></i> Research</span>
+          <span class="skill-tag"><i class="fas fa-hands-helping"></i> Team Motivation</span>
+        </div>
       </div>
     </div>
+  </section>
 
+  <!-- ============ Certificates ============ -->
+  <section id="Certificates" class="certificates" aria-label="Certificates">
+    <h2><span class="highlight">Certificates</span></h2>
+    <div class="certificates-grid">
+      <div class="certificate-card">
+        <img src="images/ECPC Certificate.jpg" alt="ECPC Qualification certificate">
+        <h3>ECPC Qualification</h3>
+        <p>Issued by ECPC, 2024</p>
+      </div>
+<!-- كارت شهادة DEPI -->
+  <div class="certificate-card">
+  <img src="images/Depi_Certificate.png" alt="Full Stack .NET Track Certificate - DEPI">
+  <h3>Full Stack Web Development (.NET)</h3>
+  <p>Issued by DEPI (Digital Egypt Pioneers Initiative)</p>
+</div>
+
+<!-- كارت شهادة الإنجليزي -->
+<div class="certificate-card">
+  <img src="images/English_Certificate.png" alt="English Language Proficiency Certificate">
+  <h3>English Language Proficiency</h3>
+  <p>Issued by / DEPI Program</p> 
+</div>
+      <div class="certificate-card">
+        <img src="images/NTI Certificate.png" alt="Web Designer certificate">
+        <h3>Web Designer</h3>
+        <p>Issued by NTI, 2025</p>
+      </div>
+      <div class="certificate-card">
+        <img src="images/IEEE Certificate.jpg" alt="Backend Development certificate">
+        <h3>Backend Development</h3>
+        <p>Issued by IEEE, 2024</p>
+      </div>
+      <!-- <div class="certificate-card">
+        <img src="images/WhatsApp Image 2025-09-02 at 14.08.50_f8123f37.jpg" alt="C++ Fundamentals certificate">
+        <h3>C++ Fundamentals</h3>
+        <p>Issued by Almentor, 2024</p>
+      </div> -->
+      <div class="certificate-card">
+        <img src="images/CodeOver Certificate.jpg" alt="CodeOver Judge certificate">
+        <h3>Judge at CodeOver</h3>
+        <p>Issued by CodeOver, 2023</p>
+      </div>
+      <div class="certificate-card">
+        <img src="images//GDG Certificate.jpg" alt="Cyber Security Camp certificate">
+        <h3>Cyber Security Camp</h3>
+        <p>Issued by GDG, 2023</p>
+      </div>
+      <div class="certificate-card">
+        <img src="images/Almentor Certificate _network.jpg" alt="Network Fundamentals certificate">
+        <h3>Network Fundamentals</h3>
+        <p>Issued by Almentor, 2024</p>
+      </div>
+      <div class="certificate-card">
+        <img src="images/Almentor Certificate _cyber.jpg" alt="Security Fundamentals certificate">
+        <h3>Security Fundamentals</h3>
+        <p>Issued by Almentor, 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Achievements ============ -->
+  <section id="achievements" class="achievements">
+    <h2><span class="highlight"><i class="fas fa-trophy"></i> Achievements</span></h2>
+    <div class="achievements-list">
+      <div class="achievement-item">
+        <h3><i class="fas fa-medal"></i> GDG</h3>
+        <p>Ranked among the top 10 teams in a Cyberchief competition.</p>
+      </div>
+      <div class="achievement-item">
+        <h3><i class="fas fa-award"></i> ECPC Qualification</h3>
+        <p>Qualified for ECPC with consistent academic and problem-solving excellence.</p>
+      </div>
+      <div class="achievement-item">
+        <h3><i class="fas fa-gavel"></i> CodeOver</h3>
+        <p>Served as a judge for the CodeOver programming competition.</p>
+      </div>
+      <div class="achievement-item">
+        <h3><i class="fas fa-chalkboard-teacher"></i> Problem Solving Coach</h3>
+        <p>Trained and mentored students in competitive programming and problem-solving techniques.</p>
+      </div>
+      <div class="achievement-item">
+  <h3><i class="fas fa-code-branch"></i> Programming Instructor</h3>
+  <p>Trained young students in programming fundamentals and computational thinking through iSchool under DEMI & DECI initiatives.</p>
+</div>
+    </div>
+  </section>
+
+  <!-- ============ Internship ============ -->
+  <section id="internship" class="internship">
+    <h2><span class="highlight"><i class="fas fa-briefcase"></i> Internship</span></h2>
+
+    <div class="internship-box">
+      <div class="internship-header">
+        <h3>National Telecom Institute (NTI)</h3>
+        <img src="images/nti.png" alt="NTI logo" class="internship-logo">
+      </div>
+      <p><strong>Duration:</strong> June 2025 – July 2025</p>
+      <ul>
+        <li>Worked as a <strong>Web Designer</strong>, focusing on creating responsive and user-friendly layouts.</li>
+        <li>Designed and optimized website components using <strong>HTML, CSS, and JavaScript</strong>.</li>
+        <li>Improved UI/UX designs to enhance accessibility and usability.</li>
+      </ul>
+    </div>
+<div class="internship-box">
+  <div class="internship-header">
+    <h3>Information Technology Institute (ITI)</h3>
+    <img src="images/iti logo.png" alt="ITI Logo" class="internship-logo">
   </div>
-</section>
+  <p><strong>Duration:</strong> July 2026 – Aug 2026</p>
+  <ul>
+    <li>Trained as a <strong>Full Stack .NET Developer</strong>, gaining hands-on experience in building scalable web applications.</li>
+    <li>Developed backend services and RESTful APIs using <strong>C#, ASP.NET Core, and Entity Framework Core</strong>.</li>
+    <li>Designed interactive user interfaces and managed data storage using <strong>SQL Server, HTML, CSS, and JavaScript</strong>.</li>
+  </ul>
+</div>
 
-
-<!-- Skills Section -->
-<section class="skills" >
-  <h2 id="skills">My Skills</h2>
-
-  <div class="skills-wrapper">
-    <!-- Technical Skills -->
-    <div class="skills-card">
-      <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
-      <div class="skill">
-        <p>HTML</p>
-        <div class="progress"><div class="progress-bar" style="width: 90%;">90%</div></div>
+    <div class="internship-box">
+      <div class="internship-header">
+        <h3>Digital Egypt Pioneers Initiative (DEPI)</h3>
+        <img src="images/depi.jpeg" alt="DEPI logo" class="internship-logo">
       </div>
-      <div class="skill">
-        <p>CSS</p>
-        <div class="progress"><div class="progress-bar" style="width: 85%;">85%</div></div>
-      </div>
-      <div class="skill">
-        <p>JavaScript</p>
-        <div class="progress"><div class="progress-bar" style="width: 70%;">70%</div></div>
-      </div>
-            <div class="skill">
-        <p>SQL</p>
-        <div class="progress"><div class="progress-bar" style="width: 98%;">98%</div></div>
-      </div>
-            <div class="skill">
-        <p>CCNA</p>
-        <div class="progress"><div class="progress-bar" style="width: 95%;">95%</div></div>
-      </div>
-            <div class="skill">
-        <p>MongoDB</p>
-        <div class="progress"><div class="progress-bar" style="width: 85%;">85%</div></div>
-      </div>
-                  <div class="skill">
-        <p>Bootstrap</p>
-        <div class="progress"><div class="progress-bar" style="width: 89%;">89%</div></div>
-      </div>
-                  <div class="skill">
-        <p>Node.js /Express.js</p>
-        <div class="progress"><div class="progress-bar" style="width: 92%;">92%</div></div>
-      </div>
+      <p><strong>Duration:</strong> July 2025 – January 2026</p>
+      <ul>
+        <li>Full Stack Developer intern specializing in <strong>ASP.NET Core</strong> and <strong>SQL Server</strong>.</li>
+        <li>Developed and deployed web applications with real-world use cases.</li>
+        <li>Collaborated within an agile team environment using Git for version control.</li>
+      </ul>
     </div>
 
-    <!-- Non-Technical Skills -->
-    <div class="skills-card">
-      <h3><i class="fas fa-user-tie"></i> Non-Technical Skills</h3>
-      <div class="skill">
-        <p>Communication</p>
-        <div class="progress"><div class="progress-bar" style="width: 95%;">95%</div></div>
+    <div class="internship-box">
+      <div class="internship-header">
+        <h3>IEEE BUB Benha</h3>
+        <img src="images/ieee-logo (1).png" alt="IEEE BUB Benha logo" class="internship-logo">
       </div>
-      <div class="skill">
-        <p>Teamwork</p>
-        <div class="progress"><div class="progress-bar" style="width: 90%;">90%</div></div>
+      <p><strong>Duration:</strong> January 2025 – July 2025</p>
+      <ul>
+        <li>Back-End Developer intern with a focus on <strong>Node.js</strong> and <strong>Express.js</strong>.</li>
+        <li>Built RESTful APIs and integrated them with databases to support dynamic applications.</li>
+        <li>Gained hands-on experience in backend optimization and deployment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Projects ============ -->
+  <section id="projects" class="projects">
+    <h2><span class="highlight">Some Of My Projects</span></h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="images/movix.png" alt="Movie Website Project">
+        <div class="project-content">
+          <h3>Movie Website</h3>
+          <p>A responsive movie website with categories, a slider, and a user list feature.</p>
+          <p class="tools"><strong>Tools:</strong> HTML, CSS, JS, Bootstrap</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii/myproject/tree/master" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+
+          </div>
+        </div>
       </div>
-      <div class="skill">
-        <p>Problem Solving</p>
-        <div class="progress"><div class="progress-bar" style="width: 80%;">80%</div></div>
+
+      <div class="project-card">
+        <img src="images/gym.png" alt="Gym Website">
+        <div class="project-content">
+          <h3>Gym Website</h3>
+          <p>Modern landing page for a gym with pricing plans and a responsive layout.</p>
+          <p class="tools"><strong>Tools:</strong> HTML, CSS, JS</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii/Home_page-GYM-" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+      
+          </div>
+        </div>
       </div>
-            <div class="skill">
-        <p>Time Management</p>
-        <div class="progress"><div class="progress-bar" style="width: 87%;">87%</div></div>
+
+      <div class="project-card">
+        <img src="images/ECC.png" alt="Company Profile Website">
+        <div class="project-content">
+          <h3>Company Profile</h3>
+          <p>Corporate website with services, about, and contact pages.</p>
+          <p class="tools"><strong>Tools:</strong> HTML, CSS</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii/Egypt-Communication-Company-_landing-page" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+  
+          </div>
+        </div>
       </div>
-            <div class="skill">
-        <p>Research</p>
-        <div class="progress"><div class="progress-bar" style="width: 95%;">95%</div></div>
+      
+      <div class="project-card">
+        <img src="images/E-commerce home page .png" alt="Company Profile Website">
+        <div class="project-content">
+          <h3>E-commerce </h3>
+          <p>E-Commerce Web App with Role-Based Access (Admin/User)</p>
+          <p class="tools"><strong>Tools:</strong>PHP, MySQL, JavaScript, and HTML/CSS</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii/E-Commerce" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+
+          </div>
+        </div>
       </div>
-            <div class="skill">
-        <p>Motivating team</p>
-        <div class="progress"><div class="progress-bar" style="width: 90%;">90%</div></div>
+            <div class="project-card">
+        <img src="images/DR Clinic.png" alt="Company Profile Website">
+        <div class="project-content">
+          <h3>full management Website for dental clinic</h3>
+          <p>MVC Project </p>
+          <p class="tools"><strong>Tools:</strong> c#,.net,html, CSS,mvc frame work</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii/Egypt-Communication-Company-_landing-page" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
       </div>
+      <div class="project-card">
+  <img src="images/webapi with .net.png" alt="Clinic Management Web API">
+  <div class="project-content">
+    <h3> Web API</h3>
+    <p>RESTful Web API built with N-Tier Architecture, Repository Pattern, and JWT Authentication.</p>
+    <p class="tools"><strong>Tools:</strong> ASP.NET Core, C#, Entity Framework Core, SQL Server, JWT</p>
+    <div class="project-links">
+      <a href="https://github.com/farahhamdii/WebAbi_using_.NET-" target="_blank" class="btn github">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+
     </div>
   </div>
-</section>
+</div>
 
-  <!-- Certificates -->
-<section id="Certificates" class="certificates" aria-label="Certificates">
-  <h2><span class="highlight">Certificates</span></h2>
-  <div class="certificates-grid">
-    <div class="certificate-card">
-      <img src="images/WhatsApp Image 2025-03-19 at 16.37.15_d6bd149d.jpg" alt="Qualifcation ECPC" />
-      <h3>Qualifcation ECPC</h3>
-      <p>Issued by ECPC, 2024</p>
-    </div>
-    <div class="certificate-card">
-      <img src="images/Screenshot (1442).png" alt="Certificate in C# Programming" />
-      <h3>Web Designer</h3>
-      <p>Issued by NTI, 2025</p>
-    </div>
-        <div class="certificate-card">
-      <img src="images/WhatsApp Image 2025-09-02 at 14.06.55_cb44bc3d.jpg" alt="Certificate in C# Programming" />
-      <h3>Backend</h3>
-      <p>Issued by IEEE, 2024</p>
-    </div>
-        <div class="certificate-card">
-      <img src="images/WhatsApp Image 2025-09-02 at 14.08.50_f8123f37.jpg" alt="Certificate in C# Programming" />
-      <h3>c++ Fudmentals</h3>
-      <p>Issued by almentor, 2024</p>
-    </div>
-        <div class="certificate-card">
-      <img src="images/WhatsApp Image 2025-09-02 at 14.08.51_655f0948.jpg" alt="Certificate in C# Programming" />
-      <h3>As a Judge in Codeover</h3>
-      <p>Issued by Codeover, 2023</p>
-    </div>
-            <div class="certificate-card">
-      <img src="images/WhatsApp Image 2025-09-02 at 14.11.02_7a85d59e.jpg" alt="Certificate in C# Programming" />
-      <h3>Cyber Security Camp</h3>
-      <p>Issued by GDG, 2023</p>
-    </div>
-            <div class="certificate-card">
-      <img src="images/WhatsApp Image 2025-09-02 at 14.08.51_00b5fcd0.jpg" alt="Certificate in C# Programming" />
-      <h3>Network Fundementals</h3>
-      <p>Issued by almentor, 2024</p>
-    </div>
-       <div class="certificate-card">
-      <img src="images/WhatsApp Image 2025-09-02 at 14.08.51_00b5fcd0.jpg" alt="Certificate in C# Programming" />
-      <h3>Security Fundementals</h3>
-      <p>Issued by almentor, 2024</p>
-    </div>
+      <!-- <div class="project-card">
+        <img src="images/Screenshot (1303).png" alt="Personal Profile Website">
+        <div class="project-content">
+          <h3>Personal Profile</h3>
+          <p>Personal website showcasing skills, services, and portfolio.</p>
+          <p class="tools"><strong>Tools:</strong> React, Tailwind</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://github.com/farahhamdii" target="_blank" class="btn live">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div> -->
 
-  </div>
-</section>
-<section id="projects" class="projects">
-  <h2><span class="highlight">My Projects</span></h2>
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <img src="images/movix.png" alt="Movie Website Project">
-      <div class="project-content">
-        <h3>Movie Website</h3>
-        <p>A responsive movie website with categories, slider, and user list feature.</p>
-        <p class="tools"><strong>Tools:</strong> 
-          <i class="fa-brands fa-html5"></i> HTML, 
-          <i class="fa-brands fa-css3-alt"></i> CSS, 
-          <i class="fa-brands fa-js"></i> JS, 
-          <i class="fa-brands fa-bootstrap"></i> Bootstrap
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/farahhamdii/myproject/tree/master" target="_blank" class="btn github">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="https://farahhamdii.github.io/myproject/" target="_blank" class="btn live">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-          </a>
+      <div class="project-card">
+        <img src="images/I_FIT_GYM profile.png" alt="Gym Management System">
+        <div class="project-content">
+          <h3>Gym Management System</h3>
+          <p>Desktop application to manage gym members, plans, and payments.</p>
+          <p class="tools"><strong>Tools:</strong> Java, MySQL</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii/I_FIT_GYM-Management-system" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project-card">
-      <img src="images/gym.png" alt="Gym Website">
-      <div class="project-content">
-        <h3>Gym Website</h3>
-        <p>Modern landing page for a gym with pricing plans and responsive layout.</p>
-        <p class="tools"><strong>Tools:</strong> 
-          <i class="fa-brands fa-html5"></i> HTML, 
-          <i class="fa-brands fa-css3-alt"></i> CSS, 
-          <i class="fa-brands fa-js"></i> JS
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn github">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn live">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-          </a>
+      <div class="project-card">
+        <img src="images/Catering landing page.png" alt="Restaurant Website">
+        <div class="project-content">
+          <h3>Restaurant Website</h3>
+          <p>Restaurant landing page with a menu, services, and contact options.</p>
+          <p class="tools"><strong>Tools:</strong> React, Tailwind, CSS, HTML</p>
+          <div class="project-links">
+            <a href="https://github.com/farahhamdii/Catering-Landing_page-" target="_blank" class="btn github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project-card">
-      <img src="images/company.png" alt="Company Profile Website">
-      <div class="project-content">
-        <h3>Company Profile</h3>
-        <p>Corporate website with services, about, and contact pages.</p>
-        <p class="tools"><strong>Tools:</strong> 
-          <i class="fa-brands fa-react"></i> React, 
-          <i class="fa-brands fa-css3-alt"></i> Tailwind
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn github">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn live">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-          </a>
-        </div>
+    </div>
+  </section>
+
+  <!-- ============ Services ============ -->
+  <section id="services" class="services">
+    <h2><span class="highlight">Services</span></h2>
+    <div class="services-grid">
+      <div class="servv">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Design</h3>
+        <p>Responsive & modern websites with clean UI/UX.</p>
+      </div>
+      <div class="servv">
+        <i class="fas fa-search"></i>
+        <h3>SEO</h3>
+        <p>Boost your online visibility with smart SEO strategies.</p>
+      </div>
+      <div class="servv">
+        <i class="fas fa-headset"></i>
+        <h3>Support</h3>
+        <p>24/7 support, maintenance & bug fixing.</p>
       </div>
     </div>
+  </section>
 
-    <div class="project-card">
-      <img src="images/Screenshot (1303).png" alt="Personal Profile">
-      <div class="project-content">
-        <h3>Personal Profile</h3>
-        <p>Personal website showcasing skills, services, and portfolio.</p>
-        <p class="tools"><strong>Tools:</strong> 
-          <i class="fa-brands fa-react"></i> React, 
-          <i class="fa-brands fa-css3-alt"></i> Tailwind
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn github">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn live">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="images/Screenshot (288).png" alt="Gym Management System">
-      <div class="project-content">
-        <h3>Gym Management System</h3>
-        <p>Desktop application to manage gym members, plans, and payments.</p>
-        <p class="tools"><strong>Tools:</strong> 
-          <i class="fa-brands fa-java"></i> Java, 
-          <i class="fa-solid fa-database"></i> MySQL
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn github">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn live">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="images/Screenshot (1423).png" alt="Restaurant Website">
-      <div class="project-content">
-        <h3>Restaurant Website</h3>
-        <p>Restaurant landing page with menu, services, and contact options.</p>
-        <p class="tools"><strong>Tools:</strong> 
-          <i class="fa-brands fa-react"></i> React, 
-          <i class="fa-brands fa-css3-alt"></i> Tailwind, 
-          <i class="fa-brands fa-css3-alt"></i> CSS, 
-          <i class="fa-brands fa-html5"></i> HTML
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/farahhamdii" target="_blank" class="btn github">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="https://yourlivedemo.com" target="_blank" class="btn live">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="services" class="services">
-  <h2><span class="highlight">Services</span></h2>
-  <div class="services-grid">
-    <div class="servv">
-      <i class="fas fa-laptop-code"></i>
-      <h3>Web Design</h3>
-      <p>Responsive & modern websites with clean UI/UX.</p>
-    </div>
-    <div class="servv">
-      <i class="fas fa-search"></i>
-      <h3>SEO</h3>
-      <p>Boost your online visibility with smart SEO strategies.</p>
-    </div>
-    <div class="servv">
-      <i class="fas fa-headset"></i>
-      <h3>Support</h3>
-      <p>24/7 support, maintenance & bug fixing.</p>
-    </div>
-  </div>
-</section>
-
-
+  <!-- ============ Contact ============ -->
   <section id="contact" class="contact">
     <h2><span class="highlight">Contact Me</span></h2>
     <form>
@@ -440,8 +504,13 @@ on experience and grow within the tech industry.
     </form>
   </section>
 
+  <!-- ============ Footer ============ -->
   <footer>
-    <p>© <span id="year">2025</span> Farah Hamdii. All rights reserved.</p>
+    <p>© <span id="year"></span> Farah Hamdii. All rights reserved.</p>
   </footer>
+
+  <!-- Bootstrap JS (navbar toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
